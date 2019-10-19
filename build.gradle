@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'juke99.Main'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.google.guava:guava:28.1-jre'
+}
+
+task printLocale {
+    doLast {
+        println Locale.getDefault()
+    }
+}
+
+sourceSets.main.java.srcDirs = ['src']
+applicationDefaultJvmArgs = ['-Dgreeting.language=en']

@@ -1,0 +1,1 @@
+I don't use bazel because why cannot use one some reason on MSVC 2017.
